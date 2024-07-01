@@ -1,0 +1,11 @@
+<launch>
+    
+    <include file="$(find turtlebot_simulation)/launch/turtlebot_hol_circuit2_aruco.launch" />    
+  
+    <node name="x1" pkg="turtlebot_simulation" type="final_img_sub_simu.py" output="screen"/>   
+    <node name="x3" pkg="turtlebot_simulation" type="final_aruco_slam_no_camera_simulation.py" output="screen"/> 
+    <node name="x5" pkg="turtlebot_simulation" type="exploration_simulation.py" output="screen"/>
+    <node name="x7" pkg="turtlebot_simulation" type="turtlebot_online_path_planning_node_simulation_Dubins.py" output="screen"/>
+ 
+</launch>      
+ 
